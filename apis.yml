@@ -1,8 +1,14 @@
 aid: successfactors
 name: Successfactors
-description: Successfactors is a company surfaced as a portfolio company of canaan-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  SuccessFactors is a cloud-based human capital management (HCM) company founded in 2001 and
+  an early Canaan Partners portfolio company that IPO'd in 2007 and was acquired by SAP in 2012.
+  It is now delivered as the SAP SuccessFactors HXM (Human Experience Management) Suite, covering
+  core HR (Employee Central), Recruiting, Onboarding, Performance & Goals, Compensation, Learning
+  (LMS), Succession & Development, and Workforce Analytics. SuccessFactors exposes an extensive
+  integration surface through OData v2 and OData v4 APIs (the SFAPI/OData platform) documented on
+  the SAP Business Accelerator Hub, using OAuth 2.0 SAML bearer-assertion and basic authentication
+  per customer datacenter instance.
 url: https://raw.githubusercontent.com/api-evangelist/successfactors/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +16,78 @@ x-backed-by:
 - canaan-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://www.successfactors.com/favicon.ico
 tags:
 - Company
-apis: []
+- Human Resources
+- HCM
+- HXM
+- Human Capital Management
+- Talent Management
+- Recruiting
+- Learning
+- Payroll
+- SAP
+- Enterprise
+- OData
+apis:
+- name: SAP SuccessFactors HXM Suite OData API
+  description: >-
+    The SAP SuccessFactors HXM Suite OData API set (OData v2 and v4) provides programmatic access to
+    Employee Central, Recruiting, Onboarding, Performance & Goals, Compensation, Learning, and other
+    HXM entities. APIs are hosted per customer datacenter instance and secured with OAuth 2.0 SAML
+    bearer-assertion or basic authentication.
+  humanURL: https://api.sap.com/products/SAPSuccessFactors/apis/REST
+  baseURL: https://api4.successfactors.com/odata/v2
+  properties:
+  - type: APIReference
+    url: https://api.sap.com/products/SAPSuccessFactors/apis/REST
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: VulnerabilityDisclosure
+  url: security/successfactors-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.successfactors.com/.well-known/security.txt
+- type: DomainSecurity
+  url: security/successfactors-domain-security.yml
+- type: SecurityTxt
+  url: well-known/successfactors-security.txt
+- type: WellKnown
+  url: well-known/successfactors-well-known.yml
+- type: Website
+  url: https://www.successfactors.com
+- type: DeveloperPortal
+  url: https://api.sap.com/products/SAPSuccessFactors/overview
+- type: Documentation
+  url: https://help.sap.com/docs/SAP_SUCCESSFACTORS_PLATFORM
+- type: APIReference
+  url: https://api.sap.com/products/SAPSuccessFactors/apis/REST
+- type: Support
+  url: https://support.sap.com
+- type: TermsOfService
+  url: https://www.sap.com/about/legal/terms-of-use.html
+- type: PrivacyPolicy
+  url: https://www.sap.com/about/legal/privacy.html
